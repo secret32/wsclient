@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh">
+	<head>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				font-size: 14px;
+				overflow-x: hidden;
+				text-align: center;
+				background: #eeeeee;
+			}
+			input[type="text"] {
+				width: 470px;
+				height: 25px;
+			}
+			input[type="button"] {
+				margin-left: 5px;
+				width: 100px;
+				height: 30px;
+			}
+			label {
+				margin-top: 20px;
+				display: inline-block;
+			}
+			label input[type="checkbox"] {
+				vertical-align: middle;
+				width: 1.3em;
+				height: 1.3em;
+			}
+			table {
+				margin: 0 auto;
+			}
+			table td {
+				padding: 30px;
+				text-align: left;
+			}
+			textarea {
+				width: 500px;
+				height: 200px;
+				resize: none;
+			}
+			.container {
+				margin-top: 30px;
+			}
+			#status {
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				margin-left: 10px;
+				background: #e3e3e3;
+			}
+		</style>
+		<script src="view.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<table>
+				<tbody>
+					<tr>
+						<td width="200px">
+							Server Location
+						</td>
+						<td>
+							<input type="text" id="serverLocation" value="ws://">
+							<span id="status"></span>
+						</td>
+						<td>
+							<input type="button" id="openBtn" value="OPEN">
+							<input type="button" id="closeBtn" value="CLOSE" style="display: none;">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Send
+						</td>
+						<td>
+							<textarea id="send" disabled></textarea>
+						</td>
+						<td>
+							<input type="button" id="sendBtn" value="SEND" disabled> <br>
+							<label>
+								<input type="checkbox" id="sendBase64" checked>Base64 Encode
+							</label>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Receive
+						</td>
+						<td>
+							<textarea id="receive" style="height: 250px;" readonly></textarea>
+						</td>
+						<td>
+							<input type="button" id="clearBtn" value="CLEAR"><br>
+							<label>
+								<input type="checkbox" id="receiveBase64" checked>Base64 Decode
+							</label>
+						</td>
+					</tr>
+				<tbody>
+			</table>
+		</div>		
+	</body>
+</html>
