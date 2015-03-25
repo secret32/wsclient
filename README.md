@@ -1,2 +1,2 @@
 # wsclient
-websocket client chrome extendsion
+websocket client chrome extension
